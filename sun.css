@@ -1,0 +1,413 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+    /* background-color: #EFEAE3; */
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+
+}
+
+body {
+    overflow-x: hidden;
+}
+
+@font-face {
+    font-family: sunBold;
+    src: url(./NeueHaasDisplay-Mediu.ttf);
+}
+
+@font-face {
+    font-family: sunMid;
+    src: url(./NeueHaasDisplay-Roman.ttf);
+}
+
+.page1 {
+    height: 225vh;
+    width: 100%;
+    background-color: #EFEAE3;
+    position: relative;
+}
+
+nav {
+    padding: 2vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav2 {
+    display: flex;
+    gap: 1vw;
+    align-items: center;
+}
+
+.nav2 h4 {
+    padding: 0.4vw .6vw;
+    border-radius: 50px;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    font-size: 17px;
+    font-weight: 900;
+    font-family: sunBold;
+    position: relative;
+    transition: all 0.4s ease-in-out;
+    overflow: hidden;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+}
+
+.nav2 h4 a {
+    text-decoration: none;
+    color: black;
+    font-family: sunBold;
+    position: relative;
+    z-index: 2;
+    display: block;
+    padding: inherit;
+}
+
+.nav2 h4::after {
+    content: "";
+    position: absolute;
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    bottom: -100%;
+    border-radius: 50%;
+    transition: all 0.4s ease-in-out;
+    z-index: 1;
+}
+
+.nav2 h4:hover::after {
+    bottom: 0;
+    border-radius: 0;
+}
+
+.nav2 h4:hover a {
+    color: white;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8.5vw;
+    padding: 0 2.5vw;
+    margin-bottom: 4vw;
+}
+
+.content2 h1 {
+    font-size: 10vw;
+    font-family: sunBold;
+    line-height: 8.3vw;
+    font-weight: 1000;
+    text-align: right;
+}
+
+.content1 h2 {
+    font-size: 2vw;
+    font-family: sunBold;
+    margin-top: 15vw;
+}
+
+.page1Video {
+    display: flex;
+    background-color: brown;
+    margin: 4vw 2vw;
+    height: 100vh;
+    width: 96%;
+    border-radius: 1.5vw;
+    overflow: hidden;
+}
+
+.page1Video video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.hero {
+    position: absolute;
+    height: 46vw;
+    width: 56vw;
+    right: 0;
+    top: 40vw;
+}
+
+#hero1 {
+    height: 35vw;
+    width: 100%;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    background-color: #FE320A;
+    filter: blur(20px);
+    position: absolute;
+}
+
+#hero2 {
+    height: 35vw;
+    width: 100%;
+    border-radius: 50%;
+    background-color: #FE320A;
+    filter: blur(20px);
+    position: absolute;
+    animation-name: anime1;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#hero3 {
+    height: 40vw;
+    width: 30vw;
+    border-radius: 50%;
+    background-color: #FE320A;
+    filter: blur(20px);
+    position: absolute;
+    animation-name: anime1;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+
+@keyframes anime1 {
+    from {
+        transform: translate(10%, -8%);
+    }
+
+    to {
+        transform: translate(0%, 10%);
+    }
+}
+
+.page2 {
+    min-height: 100vh;
+    width: 100%;
+    background-color: #EFEAE3;
+    padding: 0vw 6vw;
+}
+
+.moving_text {
+    white-space: nowrap;
+    margin-left: -6vw;
+    margin-right: -6vw;
+    overflow-x: auto;
+    margin-bottom: 11vw;
+}
+
+.moving_text h1 {
+    font-size: 9vw;
+    font-family: sunBold;
+    display: inline-block;
+}
+
+.gola {
+    height: 5vw;
+    width: 5vw;
+    background-color: #FE320A;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 1vw 2vw;
+
+}
+
+.moving_text::-webkit-scrollbar {
+    display: none;
+}
+
+.con {
+    white-space: nowrap;
+    display: inline-block;
+    animation: move;
+    animation-duration: 12s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes move {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.part1 {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+}
+
+.page2Cont1 h1 {
+    font-size: 4.2vw;
+    font-family: sunBold;
+    line-height: 4vw;
+}
+
+.given {
+    margin-top: 17vw;
+    right: 3vw;
+    display: flex;
+    gap: .8vw;
+    position: relative;
+}
+
+.page2Cont1 h3 {
+    font-family: sunMid;
+    font-weight: 300;
+    font-size: 1vw;
+}
+
+.page2Cont1 #gol {
+    height: .5vw;
+    width: .5vw;
+    background-color: #FE320A;
+    border-radius: 50%;
+    margin-top: .3vw;
+}
+
+.page2Cont1 {
+    z-index: 9;
+
+}
+
+.page2Cont2 p {
+    font-family: sunMid;
+    font-size: 2.2vh;
+}
+
+.page2Cont2 img {
+    height: 13vw;
+    width: auto;
+    border-radius: 15px;
+    margin-bottom: 3vw;
+    margin-top: 8vw;
+}
+
+.flow {
+    height: 32vw;
+    width: 32vw;
+    position: absolute;
+    margin-left: 17vw;
+    margin-top: 8vw;
+    z-index: 1;
+
+}
+
+#flow1 {
+    height: 100%;
+    width: 100%;
+    background-color: #fe7018;
+    border-radius: 50%;
+    filter: blur(20px);
+    position: absolute;
+
+}
+
+#flow2 {
+    height: 100%;
+    width: 100%;
+    background-color: #FE330A;
+    border-radius: 50%;
+    filter: blur(20px);
+    animation-name: anime2;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    position: absolute;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
+}
+
+@keyframes anime2 {
+    from {
+        transform: translate(-10%, 10%);
+    }
+
+    to {
+        transform: translate(10%, -10%);
+    }
+}
+
+.page3 {
+    padding-top: 5vw;
+    height: 200vh;
+    width: 100%;
+    background-color: #EFEAE3;
+}
+
+.elem {
+    height: 8vw;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 3vw;
+    border-bottom: rgb(217, 211, 211) 2px solid;
+    position: relative;
+    overflow: hidden;
+    padding-top: 4vw;
+}
+
+.elem h1 {
+    font-family: sunBold;
+    font-size: 3vw;
+    z-index: 9;
+    padding-bottom: 3.5vw;
+}
+
+.elemInner {
+    z-index: 9;
+    padding-bottom: 3vw;
+}
+
+.elem h4 {
+    font-family: sunMid;
+}
+
+.elem p {
+    font-family: sunMid;
+    color: #B7B1B0;
+}
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    background-color: #FF9831;
+    position: absolute;
+    top: -100%;
+    left: 0;
+    transition: all ease 0.3s;
+    z-index: 5;
+}
+
+.elem:hover .overlay {
+    top: 0
+}
+
+
+
+.fixed-img {
+    height: 30vw;
+    width: 25vw;
+    position: fixed;
+    z-index: 99;
+    border-radius: 20px;
+    left: 50%;
+    top: 30%;
+    display: none;
+    background-size: cover;
+    background-position: center;
+}

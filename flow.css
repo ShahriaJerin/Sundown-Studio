@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #EFEAE3;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flow {
+    height: 33vw;
+    width: 33vw;
+    position: relative;
+}
+
+#flow1 {
+    height: 100%;
+    width: 100%;
+    background-color: #fe7018;
+    border-radius: 50%;
+    filter: blur(20px);
+    position: absolute;
+
+}
+
+#flow2 {
+    height: 100%;
+    width: 100%;
+    background-color: #FE330A;
+    border-radius: 50%;
+    filter: blur(20px);
+    animation-name: anime2;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    position: absolute;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
+}
+
+@keyframes anime2 {
+    from {
+        transform: translate(7%, -7%);
+    }
+
+    to {
+        transform: translate(-7%, 7%);
+    }
+}
