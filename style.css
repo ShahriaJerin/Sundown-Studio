@@ -1,0 +1,670 @@
+@font-face {
+  font-family: neu;
+  src: url(./NeueHaasDisplayMediu.ttf);
+}
+
+@font-face {
+  font-family: neu;
+  font-weight: 100;
+  src: url(./NeueHaasDisplayLight.ttf);
+}
+@font-face {
+  font-family: neu;
+  font-weight: 200;
+  src: url(./NeueHaasDisplayRoman.ttf);
+}
+
+#main {
+  position: relative;
+  z-index: 999;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: neu;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+#page1 {
+  min-height: 100vh; /*Main ko height nahi di isliye vh aur loco use karna hai*/
+  width: 100%;
+  background-color: #efeae3;
+  position: relative;
+  padding: 0 2vw;
+}
+
+#page1 nav {
+  padding: 2vw 0vw;
+  width: 100%;
+  /* background-color: red; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#nav-part2 {
+  display: flex;
+  align-items: center;
+  gap: 1vw;
+}
+
+nav h3{
+  display: none;
+}
+
+#nav-part2 h4 {
+  padding: 10px 20px;
+  border: 1px solid #8a8a8a89;
+  border-radius: 50px;
+  font-weight: 500;
+  color: #000000bb;
+  font-size: 18px;
+  position: relative;
+  overflow: hidden;
+}
+
+#nav-part2 h4 a {
+  color: #000000bb;
+  text-decoration: none;
+  position: relative;
+  z-index: 9;
+}
+
+#nav-part2 h4::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  background-color: #000000bb;
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  border-radius: 50px;
+  transition: all ease 0.4s;
+}
+
+#nav-part2 h4:hover::after {
+  bottom: 0;
+  border-radius: 0;
+}
+
+#nav-part2 h4:hover a {
+  color: #edeaea;
+}
+
+#center {
+  /* background-color: orange; */
+  height: 65vh;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  border-bottom: 1px solid #0000003c;
+  padding-bottom: 2.5vw;
+}
+
+#left h3 {
+  width: 25vw;
+  font-size: 1.8vw;
+  line-height: 2vw;
+  font-family: neu;
+}
+
+#center h1 {
+  font-size: 10vw;
+  line-height: 9vw;
+  text-align: right;
+  position: relative;
+  z-index: 9;
+}
+
+#page1 video {
+  width: 100%;
+  border-radius: 30px;
+  object-fit: cover;
+  object-position: center;
+  margin-top: 3.5vw;
+  position: relative;
+  z-index: 9;
+}
+
+#hero-shape {
+  /*ACT AS wrapper div*/
+  position: absolute;
+  width: 46vw;
+  height: 36vw;
+  top: 67vh;
+  right: 0;
+}
+
+#hero-1 {
+  height: 100%;
+  width: 100%;
+  background-color: #fe320a;
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+  filter: blur(20px);
+  position: absolute;
+}
+
+#hero-2 {
+  height: 30vw;
+  width: 30vw;
+  background-color: #fe320a;
+  border-radius: 50%;
+  filter: blur(20px);
+  position: absolute;
+  animation-name: anime2;
+  animation-duration: 4s;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
+#hero-3 {
+  height: 30vw;
+  width: 30vw;
+  background-color: #fe320a;
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+  filter: blur(20px);
+  position: absolute;
+  animation-name: anime1;
+  animation-duration: 4s;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
+@keyframes anime1 {
+  from {
+    transform: translate(55%, -3%);
+  }
+  to {
+    transform: translate(0%, 10%);
+  }
+}
+
+@keyframes anime2 {
+  from {
+    transform: translate(5%, -5%);
+  }
+  to {
+    transform: translate(-20%, 30%);
+  }
+}
+
+/*Page 2 - After video part*/
+
+#page2 {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  background-color: #efeae3;
+  padding: 7vw 0;
+}
+
+#moving-text {
+  white-space: nowrap;
+  overflow-x: auto; /*iss se hold karke move kar skte hain*/
+}
+
+#moving-text::-webkit-scrollbar {
+  display: none;
+}
+
+.con {
+  white-space: nowrap;
+  display: inline-block;
+  animation-name: mobe;
+  animation-duration: 25s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+#moving-text h1 {
+  font-size: 9vw;
+  display: inline-block;
+}
+
+.gola {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  background-color: #fe320a;
+  display: inline-block;
+  margin: 1vw 2vw;
+}
+
+@keyframes mobe {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/*PAGE2-Bottom*/
+
+#page2-bottom {
+  height: 80vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4.5vw;
+  position: relative;
+  z-index: 9;
+}
+
+#page2-bottom h1 {
+  font-size: 4vw;
+  width: 60%;
+  line-height: 4vw;
+}
+
+#bottom-part2 {
+  width: 20%;
+}
+
+#bottom-part2 img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+#bottom-part2 p {
+  font-weight: 200;
+  margin-top: 2vw;
+  font-size: 1vw;
+}
+
+#page2 #gooey {
+  height: 32vw;
+  width: 32vw;
+  position: absolute;
+  border-radius: 50%;
+  background: linear-gradient(to top right, #fe320a, #ff671b);
+  top: 58%;
+  left: 25%;
+  filter: blur(20px);
+  animation-name: gooey;
+  animation-duration: 6s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes gooey {
+  from {
+    filter: blur(20px);
+    transform: translate(10%, -10%) skew(0);
+  }
+  to {
+    filter: blur(30px);
+    transform: translate(-10%, 10%) skew(-12deg);
+  }
+}
+
+/*PAGE3 Animation*/
+
+#page3 {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #efeae3;
+  padding: 4vw 0;
+}
+
+.elem {
+  height: 120px;
+  width: 100%;
+  position: relative;
+  border-bottom: 1px solid #0000003c;
+  display: flex;
+  align-items: center;
+  padding: 0 2vw;
+  overflow: hidden;
+}
+
+.elem h2 {
+  font-size: 3vw;
+  z-index: 9;
+}
+
+.elem .overlay {
+  width: 100%;
+  height: 100%;
+  background-color: orange;
+  position: absolute;
+  left: 0;
+  top: -100%;
+  transition: all ease 0.3s;
+}
+
+.elem:hover .overlay {
+  top: 0; /*jab tum elem par hover karo aur overlay top se zero ho*/
+}
+
+/*Image Hover Animation*/
+
+#fixed-image {
+  height: 30vw;
+  width: 24vw;
+  /* background-color: red; */
+  border-radius: 20px;
+  position: fixed;
+  left: 50%;
+  top: 25%;
+  z-index: 9999;
+  display: none;
+  background-size: cover;
+  background-position: center;
+  filter: drop-shadow(2px 2px 10px #070707) contrast(1) saturate(2);
+}
+
+#elem-container {
+  position: relative;
+}
+
+/*PAGE4 ANIMATION*/
+
+#page4 {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #edeaea;
+  padding-top: 8vw;
+  position: relative;
+}
+
+#page4 #tri-container {
+  height: 50vw;
+  width: 94vw;
+  background-color: #070707;
+  margin: 0 3vw;
+  border-radius: 2vw;
+  position: relative;
+}
+
+#tri-container #content-left {
+  /* background-color: rgba(255, 0, 0, 0.347); */
+  height: 24vw;
+  width: 28vw;
+  position: absolute;
+  top: 13vw;
+  left: 12vw;
+}
+
+#con-top {
+  height: 14vw;
+  width: 26vw;
+  margin: 0.5vw 1vw;
+  /* background-color: rgba(0, 255, 255, 0.542); */
+}
+
+#con-bot {
+  height: 8.8vw;
+  width: 26vw;
+  /* background-color: #ff671b87; */
+  margin: 0 1vw 0 1vw;
+  padding: 0.5vw;
+}
+
+#con-bot p {
+  font-weight: 200;
+  color: #ccc8c8;
+}
+
+#con-top #line {
+  height: 14vw;
+  width: 0.2vw;
+  border-radius: 20px;
+  background-color: #8a8987;
+  position: relative;
+}
+
+#con-top #con-name {
+  position: absolute;
+  top: 0.1vw;
+  left: 5vw;
+}
+
+#con-top #con-name h3 {
+  font-size: 4.2vw;
+  color: #8a8987;
+  cursor: pointer;
+  transform: translateX(0);
+  transition: all ease 0.2s;
+}
+
+#content-right {
+  height: 50vw;
+  width: 46vw;
+  background: url(https://images.unsplash.com/photo-1701067800549-f6e29360fb9a?q=80&w=1938&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  right: 0;
+  position: absolute;
+  border-radius: 2vw;
+  background-size: cover;
+  background-position: center;
+}
+
+/*PAGE5 ANIMATION*/
+
+#page5 {
+  min-height: 50vh;
+  width: 100%;
+  background-color: #edeaea;
+  padding: 4vw;
+  position: relative;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.swiper-slide {
+  height: 20vw;
+  width: 30%;
+  border-left: 1px solid #8a898767;
+  padding-left: 2vw;
+  cursor: grab;
+}
+
+.swipeImg {
+  height: 7vw;
+  margin-bottom: 1vw;
+}
+
+.swipePara {
+  width: 70%;
+  font-weight: 200;
+}
+
+/*PAGE-6 ANIMATION*/
+
+#page6 {
+  height: 100vh;
+  width: 100%;
+}
+
+/*FOOTER ANIMATION*/
+
+#footer {
+  position: fixed;
+  height: 105vh;
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+  z-index: 1;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+
+#footer h1 {
+  font-size: 23vw;
+}
+
+#footer-div {
+  width: 100%;
+  height: 15vh;
+  /* background-color: red; */
+  display: flex;
+  justify-content: space-between;
+  padding: 0 7vw;
+}
+
+#footer-div-left h5 {
+  font-size: 2vw;
+}
+
+#footer-div-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#footer-div-right-top h5 {
+  font-size: 1.3vw;
+  font-weight: 200;
+  color: #e7e3e3;
+}
+
+#footer-div-right-bottom h5 {
+  font-size: 1.2vw;
+  font-weight: 200;
+  border-bottom: 1.5px solid #dadada;
+  color: #d4d2cd;
+  padding: 0.2vw;
+  width: 120%;
+}
+
+#footer-div-bottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 22vw;
+  border-top: 1px solid #d1d1d16b;
+  padding: 2vw;
+}
+
+#footer-div-bottom h5 {
+  font-size: 1vw;
+  font-weight: 200;
+}
+
+#footer-hero-section {
+  position: absolute;
+  height: 27vw;
+  width: 100%;
+  /* background-color: rgba(231, 0, 0, 0.389); */
+  top: 0;
+  z-index: -1;
+}
+
+#footer-hero1 {
+  position: absolute;
+  background-color: #f7310a;
+  filter: blur(30px);
+  height: 100vw;
+  width: 100vw;
+  right: -5%;
+  top: -245%;
+  border-bottom-left-radius: 120%;
+  /* border-radius: 50%; */
+  animation-name: footer-anime2;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+#footer-hero2 {
+  position: absolute;
+  background-color: #f7310a;
+  filter: blur(30px);
+  height: 80vw;
+  width: 70vw;
+  top: -130%;
+  left: -10%;
+  border-bottom-right-radius: 130%;
+  animation-name: footer-anime1;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes footer-anime1 {
+  from {
+    transform: translateX(0%);
+  }
+
+  to {
+    transform: translateX(8%);
+    filter: blur(60px);
+  }
+}
+
+@keyframes footer-anime2 {
+  from {
+    transform: translate(0%, 0%);
+  }
+
+  to {
+    transform: translate(-2%, 5%);
+    filter: blur(60px);
+  }
+}
+
+#full-scr{
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.807);
+  position: fixed;
+  z-index: 9999;
+  top: -100%;
+  transition: all ease-in 0.8s;
+}
+
+/*RESPONSIVENESS*/
+
+@media (max-width:600px){
+  #page1 {
+    min-height: 100vh; /*Main ko height nahi di isliye vh aur loco use karna hai*/
+    width: 100vw;
+    padding: 0 5vw;
+  }
+  
+  #page1 nav {
+    padding: 8vw 5vw;
+    position: relative;
+    z-index: 10900;
+  }
+
+  #nav img{
+    height: 9vh;
+  }
+  
+  #nav-part2 {
+    display: none;
+  }
+
+  nav h3{
+    display: block;
+     padding: 3vw 5vw;
+     border: 1px solid #ababab;
+     border-radius: 50px;
+     font-size: 4vw;
+     font-weight: 200;
+  }
+}
+
